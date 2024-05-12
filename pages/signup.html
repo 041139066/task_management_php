@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../styles/base.css">
+  <script type="module" src="../scripts/signUp.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Task Management Application</h1>
+  </header>
+  <div class="wrapper">
+    <h2>Sign Up a New Account</h2>
+    <form id="signup-form" class="form-container">
+      <div class="form-field">
+        <label for="name">Please enter user name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-field">
+        <label for="password">Please enter your password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="form-field">
+        <label for="re-password">Please re-enter the password:</label>
+        <input type="password" id="re-password" name="re-password">
+      </div>
+      <div class="form-field">
+        <button type="submit" id="signup-btn" class="form-button">Sign Up</button>
+        <button type="reset" id="reset-btn" class="form-button">Clear</button>
+      </div>
+      <div class="form-text">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+    </form>
+  </div>
+  <footer>
+    &copy; 2024 Pengyu Song & Junchao Lu
+  </footer>
+</body>
+
+</html>

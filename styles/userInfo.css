@@ -1,0 +1,33 @@
+@import url("./base.css");
+
+#avatar {
+  margin: 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 150px;
+  height: 150px;
+  background: no-repeat center/cover url("../assets/images/avatar.png");
+}
+#user-form {
+  margin-top: 36px;
+  width: 80%;
+  max-width: 500px;
+}
+.form-field+.form-field{
+  margin-top: 16px;
+}
+input {
+  border: none;
+}
+/* upload button */
+input::file-selector-button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background-color: var(--primary-button);
+  color: #fff;
+}
+input::file-selector-button:hover {
+  background-color: var(--hover-button);
+}
+

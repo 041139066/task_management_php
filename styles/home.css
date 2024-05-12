@@ -1,0 +1,143 @@
+@import url("./base.css");
+
+.wrapper {
+  width: 60%;
+  align-self: center;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* search bar */
+#search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#search-bar input {
+  flex: 1 1 400px;
+}
+#search-bar select {
+  flex: 0 1 150px;
+  margin-left: 12px;
+}
+#search-bar button {
+  cursor: pointer;
+  flex: 0 1 120px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: var(--primary-button);
+}
+#search-bar button:hover{
+  background-color: var(--hover-button);
+}
+/* load button */
+.form-button {
+  margin-top: 16px;
+  background-color: rgba(0, 100, 148, 0.7);
+}
+.form-button:hover {
+  background-color: rgba(7, 77, 109, 0.7);
+}
+
+/* add task button */
+.icon-button {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto;
+  padding: 10px;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--bright-text);
+  text-decoration: none;
+}
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.icon-img {
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/images/add.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+}
+.icon-text {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* task list */
+#task-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+}
+.task-card {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  margin: 0px 8px;
+}
+.task-card + .task-card {
+  margin-top: 16px;
+}
+.task-content {
+  flex: 1;
+}
+.task-itm + .task-itm {
+  margin-top: 4px;
+}
+.task-itm-title {
+  font-weight: bold;
+}
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.task-buttons .icon-button {
+  margin: 0px;
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+}
+.task-buttons .icon-button .icon-img {
+  width: 25px;
+  height: 25px;
+  margin: 0px;
+}
+
+/* responsive style */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
+  .task-card {
+    flex-direction: column;
+  }
+  .task-buttons {
+    flex-direction: row;
+  }
+  .task-itm-title {
+    display: block;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Account</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../styles/userInfo.css">
+  <script type="module" src="../scripts/userInfo.js" defer></script>
+</head>
+
+<body>
+  <div id="nav-bar">
+    <a href="./home.html">My Tasks</a>
+  </div>
+  <h1>My Account</h1>
+  <div class="wrapper">
+    <div id="avatar"></div>
+    <form id="upload">
+      <input type="file" name="avatar" accept="image/*">
+    </form>
+    <form id="user-form">
+      <div class="form-field">
+        <label for="name">User Name: </label>
+        <input type="text" id="name" name="name" disabled>
+      </div>
+      <div class="form-field">
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-field">
+        <label for="password">Please enter Password: </label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="form-field">
+        <label for="re-password">Please Re-enter Password: </label>
+        <input type="password" id="re-password" name="re-password">
+      </div>
+      <div class="form-field">
+        <button type="submit" id="submit-btn" class="form-button">Update</button>
+        <button type="reset" id="reset-btn" class="form-button">Reset</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    &copy; 2024 Pengyu Song & Junchao Lu
+  </footer>
+</body>
+
+</html>

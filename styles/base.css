@@ -1,0 +1,203 @@
+/* reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box; /* Add box-sizing:border-box; */
+}
+
+/* basic styles and layout */
+body {
+  --primary-text: rgb(40, 109, 187);
+  --bright-text: rgb(40, 109, 187);
+  --primary-button: rgb(0, 100, 148);
+  --hover-button: rgb(7, 77, 109);
+  background-color: rgb(254, 228, 64);
+  background-image: url("../assets/images/background.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.wrapper{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* footer */
+footer {
+  padding: 16px 0px;
+  text-align: center;
+  color: rgb(252, 252, 249);
+}
+footer a {
+  font-size: 10px;
+  color: rgb(252, 252, 249);
+  margin-left: 8px;
+}
+
+/* headings */
+h1 {
+  margin: 32px 16px;
+  text-align: center;
+  color: var(--primary-text);
+}
+h2 {
+  margin: 24px 16px;
+  text-align: center;
+  color: rgb(245, 245, 220);
+}
+
+/* customized scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+/* form */
+.form-container {
+  margin: 16px;
+  border: solid rgb(204, 204, 204);
+  border-radius: 16px;
+  padding: 16px 32px 32px;
+  width: 80%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.form-field {
+  margin: 24px 0px 0px;
+}
+label {
+  display: block;
+  color: var(--primary-text);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+input, select, textarea {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 6px;
+  outline-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #666;
+  resize: vertical;
+}
+/* hide resizer of textarea */
+::-webkit-resizer { 
+  display: none;
+}
+.error-field {
+  border: 1px solid #e34234;
+  outline-color: #e34234;
+}
+.hint {
+  color: rgb(99 38 117);
+  font-size: 12px;
+}
+.form-button {
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  width: 100%;
+  background-color: var(--primary-button);
+  color: #fff;
+}
+.form-button:hover{
+  background-color: var(--hover-button);
+}
+.form-text {
+  text-align: center;
+  color: var(--bright-text);
+}
+
+/* navigator */
+#nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+}
+#nav-bar a {
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 16px;
+  border: 1px solid #fff;
+  color: var(--bright-text);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#nav-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* response notification */
+.notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  background-color: rgb(244, 244, 245, 0.8);
+  color: rgb(144, 147, 153);
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: top 0.5s ease-in-out;
+}
+.notification.show {
+  top: 10%;
+}
+.notification.success {
+  background-color: rgb(240, 249, 235, 0.8);
+  color: rgb(103, 194, 58);
+}
+.notification.error {
+  background-color: rgb(254, 240, 240, 0.8);
+  color: rgb(248, 152, 152);
+}
+
+@media screen and (max-width: 600px) {
+  #nav-bar {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
